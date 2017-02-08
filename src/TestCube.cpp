@@ -10,13 +10,13 @@
 
 using namespace std;
 
-unsigned int TestCube::testCubeCounter=0;
-GLuint TestCube::vertexShaderId=0;
-GLuint TestCube::fragmentShaderId=0;
-GLuint TestCube::programObject=0;
-GLint TestCube::v_pos_index=0;
-GLint TestCube::v_color_index=0;
-GLint TestCube::mvp_matrix_index=0;
+unsigned int TestCube::testCubeCounter = 0;
+GLuint TestCube::vertexShaderId = 0;
+GLuint TestCube::fragmentShaderId = 0;
+GLuint TestCube::programObject = 0;
+GLint TestCube::v_pos_index = 0;
+GLint TestCube::v_color_index = 0;
+GLint TestCube::mvp_matrix_index = 0;
 
 GLfloat TestCube::vertices[] = {
         // Front face
@@ -143,15 +143,15 @@ TestCube::TestCube() : angle(0.0f) {
 
 TestCube::~TestCube(){
     testCubeCounter--;
-    if(testCubeCounter==0){
+    if(testCubeCounter == 0){
         glDeleteProgram(programObject);
-        programObject=0;
+        programObject = 0;
         glDeleteShader(vertexShaderId);
-        vertexShaderId=0;
+        vertexShaderId = 0;
         glDeleteShader(fragmentShaderId);
-        fragmentShaderId=0;
-        v_pos_index=0;
-        v_color_index=0;
+        fragmentShaderId = 0;
+        v_pos_index = 0;
+        v_color_index = 0;
     }
 }
 

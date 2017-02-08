@@ -31,8 +31,10 @@
 			</Target>
 		</Build>
 		<Compiler>
-			<Add option="-std=c++11" />
+			<Add option="-pedantic" />
+			<Add option="-Wextra" />
 			<Add option="-Wall" />
+			<Add option="-std=c++11" />
 		</Compiler>
 		<Linker>
 			<Add option="-lSDL2" />
@@ -40,15 +42,19 @@
 			<Add option="-lGLESv1_CM" />
 			<Add option="-lEGL" />
 		</Linker>
+		<Unit filename="include/Camera.h" />
 		<Unit filename="include/Goon.h" />
 		<Unit filename="include/Input_Manager.h" />
+		<Unit filename="include/PhongMaterial.h" />
 		<Unit filename="include/Sdl_Manager.h" />
 		<Unit filename="include/TestCube.h" />
 		<Unit filename="include/TestTriangle.h" />
 		<Unit filename="include/util.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Camera.cpp" />
 		<Unit filename="src/Goon.cpp" />
 		<Unit filename="src/Input_Manager.cpp" />
+		<Unit filename="src/PhongMaterial.cpp" />
 		<Unit filename="src/Sdl_Manager.cpp" />
 		<Unit filename="src/TestCube.cpp" />
 		<Unit filename="src/TestTriangle.cpp" />

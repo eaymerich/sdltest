@@ -3,7 +3,8 @@
 #include "Sdl_Manager.h"
 
 Sdl_Manager::Sdl_Manager() :
-    window(nullptr)
+    window{nullptr},
+    glcontext{0}
 {
     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
         std::cerr << "SDL could not initialize: " << SDL_GetError() << std::endl;

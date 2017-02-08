@@ -5,6 +5,7 @@
 #include "Goon.h"
 #include "TestTriangle.h"
 #include "TestCube.h"
+#include "Camera.h"
 
 int main() {
     std::cout << "Hello SDL Test v0.1" << std::endl;
@@ -13,10 +14,13 @@ int main() {
     Sdl_Manager sdl;
     Goon goon;
     Input_Manager input_manager;
+
+    // Init game objects
+    Camera camera;
     //TestTriangle triangle;
     TestCube cube;
 
-    //  Game Cycle
+    // Game Cycle
     while (goon()) {
         // Read Input
         input_manager.readInput();
