@@ -43,6 +43,7 @@
 			<Add option="-lEGL" />
 		</Linker>
 		<Unit filename="include/Camera.h" />
+		<Unit filename="include/FlatCube.h" />
 		<Unit filename="include/Goon.h" />
 		<Unit filename="include/Input_Manager.h" />
 		<Unit filename="include/PhongMaterial.h" />
@@ -52,6 +53,7 @@
 		<Unit filename="include/util.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Camera.cpp" />
+		<Unit filename="src/FlatCube.cpp" />
 		<Unit filename="src/Goon.cpp" />
 		<Unit filename="src/Input_Manager.cpp" />
 		<Unit filename="src/PhongMaterial.cpp" />

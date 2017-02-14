@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1486590060 source:/home/aymerice/workspace/sdltest/main.cpp
+1487104506 source:/home/aymerice/workspace/sdltest/main.cpp
 	<iostream>
 	"Sdl_Manager.h"
 	"Input_Manager.h"
 	"Goon.h"
 	"TestTriangle.h"
 	"TestCube.h"
+	"FlatCube.h"
 	"Camera.h"
 
 1477592560 /home/aymerice/workspace/sdltest/include/Sdl_Manager.h
@@ -28,11 +29,11 @@
 
 1480604914 /home/aymerice/workspace/sdltest/include/Goon.h
 
-1477601441 source:/home/aymerice/workspace/sdltest/src/util.cpp
+1487014128 source:/home/aymerice/workspace/sdltest/src/util.cpp
 	<iostream>
 	"util.h"
 
-1477601454 /home/aymerice/workspace/sdltest/include/util.h
+1487102711 /home/aymerice/workspace/sdltest/include/util.h
 	<GLES2/gl2.h>
 
 1477601644 source:/home/aymerice/workspace/sdltest/src/TestTriangle.cpp
@@ -465,7 +466,7 @@
 1477601610 /home/aymerice/workspace/sdltest/include/TestTriangle.h
 	"GLES2/gl2.h"
 
-1486491756 source:/home/aymerice/workspace/sdltest/src/TestCube.cpp
+1487103185 source:/home/aymerice/workspace/sdltest/src/TestCube.cpp
 	"glm/gtc/matrix_transform.hpp"
 	"glm/gtc/type_ptr.hpp"
 	"util.h"
@@ -486,4 +487,14 @@
 1486590802 /home/aymerice/workspace/sdltest/include/Camera.h
 	"glm/vec3.hpp"
 	"glm/mat4x4.hpp"
+
+1487105042 source:/home/aymerice/workspace/sdltest/src/FlatCube.cpp
+	"glm/gtc/matrix_transform.hpp"
+	"glm/gtc/type_ptr.hpp"
+	"Camera.h"
+	"util.h"
+	"FlatCube.h"
+
+1487103173 /home/aymerice/workspace/sdltest/include/FlatCube.h
+	<GLES2/gl2.h>
 

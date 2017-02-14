@@ -9,7 +9,10 @@ GLuint loadShader(const char* shaderSrc, GLenum type){
     GLint compiled;
 
     shader = glCreateShader(type);
-    if(shader==0) return 0;
+    if (shader==0){
+        cerr << "ERROR: could not create GLSL shader." << endl;
+        abort();
+    }
 
     glShaderSource(shader, 1, &shaderSrc, NULL);
     glCompileShader(shader);
@@ -27,7 +30,6 @@ GLuint loadShader(const char* shaderSrc, GLenum type){
         }
         glDeleteShader(shader);
         abort();
-        return 0;
     }
 
     return shader;

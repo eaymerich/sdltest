@@ -5,6 +5,7 @@
 #include "Goon.h"
 #include "TestTriangle.h"
 #include "TestCube.h"
+#include "FlatCube.h"
 #include "Camera.h"
 
 int main() {
@@ -18,7 +19,8 @@ int main() {
     // Init game objects
     Camera camera;
     //TestTriangle triangle;
-    TestCube cube;
+    //TestCube cube;
+    FlatCube fcube;
 
     // Game Cycle
     while (goon()) {
@@ -27,12 +29,12 @@ int main() {
 
         // Logic
         uint32_t count = SDL_GetTicks();
-        cube.update(count);
+        fcube.update(count);
 
         // Render
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         //triangle.draw();
-        cube.draw();
+        fcube.draw();
         sdl.swap();
 
         //SDL_Delay(150);
