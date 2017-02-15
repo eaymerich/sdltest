@@ -186,15 +186,13 @@ void FlatCube::draw(){
     glUseProgram(programObject);
 
     // Get and set transformation matrices
-    //glm::mat4 model(1.0f);
     glm::mat4 model = glm::rotate(
         glm::mat4(1.0f),
         angle,
         glm::normalize(glm::vec3(0.0f,1.0f,0.0f)));
 
     glm::mat4 view = Camera::getCurrentCamera()->viewMatrix();
-    //glm::mat4 proj = glm::mat4(1.0f);
-    glm::mat4 proj = glm::perspective(45.0f, 4.0f/3.0f, 0.1f, 100.0f);
+    glm::mat4 proj = Camera::getCurrentCamera()->projMatrix();
 
     glUniformMatrix4fv(model_matrix_index, 1, GL_FALSE, glm::value_ptr(model));
     glUniformMatrix4fv(view_matrix_index, 1, GL_FALSE, glm::value_ptr(view));
