@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1487104506 source:/home/aymerice/workspace/sdltest/main.cpp
+1487188343 source:/home/aymerice/workspace/sdltest/main.cpp
 	<iostream>
 	"Sdl_Manager.h"
 	"Input_Manager.h"
@@ -13,7 +13,7 @@
 	<SDL2/SDL.h>
 	<SDL2/SDL_opengles2.h>
 
-1486576938 source:/home/aymerice/workspace/sdltest/src/Sdl_Manager.cpp
+1487189215 source:/home/aymerice/workspace/sdltest/src/Sdl_Manager.cpp
 	<iostream>
 	"Sdl_Manager.h"
 
@@ -36,13 +36,14 @@
 1487102711 /home/aymerice/workspace/sdltest/include/util.h
 	<GLES2/gl2.h>
 
-1477601644 source:/home/aymerice/workspace/sdltest/src/TestTriangle.cpp
+1487186677 source:/home/aymerice/workspace/sdltest/src/TestTriangle.cpp
 	"GLES2/gl2.h"
 	<exception>
 	<iostream>
 	"glm/gtc/matrix_transform.hpp"
 	"glm/gtc/type_ptr.hpp"
 	"util.h"
+	"Camera.h"
 	"TestTriangle.h"
 
 1473885901 /home/aymerice/workspace/sdltest/include/glm/gtc/matrix_transform.hpp
@@ -463,8 +464,8 @@
 1473885901 /home/aymerice/workspace/sdltest/include/glm/gtc/type_ptr.inl
 	<cstring>
 
-1477601610 /home/aymerice/workspace/sdltest/include/TestTriangle.h
-	"GLES2/gl2.h"
+1487186824 /home/aymerice/workspace/sdltest/include/TestTriangle.h
+	<GLES2/gl2.h>
 
 1487103185 source:/home/aymerice/workspace/sdltest/src/TestCube.cpp
 	"glm/gtc/matrix_transform.hpp"
@@ -480,15 +481,15 @@
 
 1486491756 /home/aymerice/workspace/sdltest/include/PhongMaterial.h
 
-1486590822 source:/home/aymerice/workspace/sdltest/src/Camera.cpp
+1487186633 source:/home/aymerice/workspace/sdltest/src/Camera.cpp
 	"glm/gtc/matrix_transform.hpp"
 	"Camera.h"
 
-1486590802 /home/aymerice/workspace/sdltest/include/Camera.h
+1487186339 /home/aymerice/workspace/sdltest/include/Camera.h
 	"glm/vec3.hpp"
 	"glm/mat4x4.hpp"
 
-1487105042 source:/home/aymerice/workspace/sdltest/src/FlatCube.cpp
+1487188304 source:/home/aymerice/workspace/sdltest/src/FlatCube.cpp
 	"glm/gtc/matrix_transform.hpp"
 	"glm/gtc/type_ptr.hpp"
 	"Camera.h"

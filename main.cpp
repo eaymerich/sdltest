@@ -17,8 +17,9 @@ int main() {
     Input_Manager input_manager;
 
     // Init game objects
-    Camera camera;
-    //TestTriangle triangle;
+    Camera camera{glm::vec3{0.0f, 1.5f, 1.5f}};
+    //Camera camera;
+    TestTriangle triangle;
     //TestCube cube;
     FlatCube fcube;
 
@@ -29,6 +30,7 @@ int main() {
 
         // Logic
         uint32_t count = SDL_GetTicks();
+        camera.update();
         fcube.update(count);
 
         // Render
