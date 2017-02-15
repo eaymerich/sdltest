@@ -1,7 +1,7 @@
 #ifndef __TEST_TRIANGLE_H__
 #define __TEST_TRIANGLE_H__
 
-#include "GLES2/gl2.h"
+#include <GLES2/gl2.h>
 
 class TestTriangle {
 public:
@@ -16,7 +16,9 @@ private:
     static GLuint programObject;
     static GLint v_pos_index;
     static GLint v_color_index;
-    static GLint mvp_matrix_index;
+    static GLint model_matrix_index;
+    static GLint view_matrix_index;
+    static GLint projection_matrix_index;
     static GLfloat vertices[];
     static GLfloat colors[];
 };
