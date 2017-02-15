@@ -11,29 +11,28 @@ Camera::Camera(const vec3& vEye,
                const vec3& vUp) :
     eye{vEye},
     center{vCenter},
-    up{vUp}
+    up{vUp},
+    viewM{1.0f},
+    projM{1.0f}
 {
     if (!currentCamera) {
         currentCamera = this;
     }
+    projM = perspective(45.0f, 4.0f/3.0f, 0.1f, 100.0f);
 }
 
 Camera* Camera::getCurrentCamera() {
     return currentCamera;
 }
 
-mat4 Camera::viewMatrix() {
-//    vec3 zaxis = normalize(eye - lookAt);
-//    vec3 xaxis = normalize(cross(up, zaxis));
-//    vec3 yaxis = cross(zaxis, xaxis);
-//
-//    mat4 viewM {
-//        xaxis.x, yaxis.x, zaxis.x, 0.0,
-//        xaxis.y, yaxis.y, zaxis.y, 0.0,
-//        xaxis.z, yaxis.z, zaxis.z, 0.0,
-//        -dot(xaxis, eye), -dot(yaxis, eye), -dot(zaxis, eye), 1.0
-//    };
-//
-//    return viewM;
-    return lookAt(eye, center, up);
+void Camera::update() {
+    viewM = lookAt(eye, center, up);
+}
+
+mat4& Camera::viewMatrix() {
+    return viewM;
+}
+
+mat4& Camera::projMatrix() {
+    return projM;
 }
