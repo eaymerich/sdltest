@@ -159,8 +159,7 @@ FlatCube::FlatCube() :
     ++flatCubeCounter;
 }
 
-FlatCube::~FlatCube()
-{
+FlatCube::~FlatCube() {
     --flatCubeCounter;
     if (flatCubeCounter == 0) {
         glDeleteProgram(programObject);

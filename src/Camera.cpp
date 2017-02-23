@@ -25,6 +25,16 @@ Camera* Camera::getCurrentCamera() {
     return currentCamera;
 }
 
+void Camera::setCurrentCamera(Camera* aCamera) {
+    currentCamera = aCamera;
+    currentCamera->update();
+}
+
+void Camera::setCurrentCamera(Camera& aCamera) {
+    currentCamera = &aCamera;
+    currentCamera->update();
+}
+
 void Camera::update() {
     viewM = lookAt(eye, center, up);
 }

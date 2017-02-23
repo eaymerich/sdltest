@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1487188343 source:/home/aymerice/workspace/sdltest/main.cpp
+1487780477 source:/home/aymerice/workspace/sdltest/main.cpp
 	<iostream>
 	"Sdl_Manager.h"
 	"Input_Manager.h"
@@ -7,13 +7,14 @@
 	"TestTriangle.h"
 	"TestCube.h"
 	"FlatCube.h"
+	"PhongCube.h"
 	"Camera.h"
 
-1477592560 /home/aymerice/workspace/sdltest/include/Sdl_Manager.h
+1487779237 /home/aymerice/workspace/sdltest/include/Sdl_Manager.h
 	<SDL2/SDL.h>
 	<SDL2/SDL_opengles2.h>
 
-1487189215 source:/home/aymerice/workspace/sdltest/src/Sdl_Manager.cpp
+1487779297 source:/home/aymerice/workspace/sdltest/src/Sdl_Manager.cpp
 	<iostream>
 	"Sdl_Manager.h"
 
@@ -481,15 +482,15 @@
 
 1486491756 /home/aymerice/workspace/sdltest/include/PhongMaterial.h
 
-1487186633 source:/home/aymerice/workspace/sdltest/src/Camera.cpp
+1487780367 source:/home/aymerice/workspace/sdltest/src/Camera.cpp
 	"glm/gtc/matrix_transform.hpp"
 	"Camera.h"
 
-1487186339 /home/aymerice/workspace/sdltest/include/Camera.h
+1487779949 /home/aymerice/workspace/sdltest/include/Camera.h
 	"glm/vec3.hpp"
 	"glm/mat4x4.hpp"
 
-1487188304 source:/home/aymerice/workspace/sdltest/src/FlatCube.cpp
+1487633014 source:/home/aymerice/workspace/sdltest/src/FlatCube.cpp
 	"glm/gtc/matrix_transform.hpp"
 	"glm/gtc/type_ptr.hpp"
 	"Camera.h"
@@ -498,4 +499,14 @@
 
 1487103173 /home/aymerice/workspace/sdltest/include/FlatCube.h
 	<GLES2/gl2.h>
+
+1487710700 /home/aymerice/workspace/sdltest/include/PhongCube.h
+	<GLES2/gl2.h>
+
+1487787134 source:/home/aymerice/workspace/sdltest/src/PhongCube.cpp
+	"glm/gtc/matrix_transform.hpp"
+	"glm/gtc/type_ptr.hpp"
+	"Camera.h"
+	"util.h"
+	"PhongCube.h"
 

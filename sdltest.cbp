@@ -46,7 +46,7 @@
 		<Unit filename="include/FlatCube.h" />
 		<Unit filename="include/Goon.h" />
 		<Unit filename="include/Input_Manager.h" />
-		<Unit filename="include/PhongMaterial.h" />
+		<Unit filename="include/PhongCube.h" />
 		<Unit filename="include/Sdl_Manager.h" />
 		<Unit filename="include/TestCube.h" />
 		<Unit filename="include/TestTriangle.h" />
@@ -56,7 +56,7 @@
 		<Unit filename="src/FlatCube.cpp" />
 		<Unit filename="src/Goon.cpp" />
 		<Unit filename="src/Input_Manager.cpp" />
-		<Unit filename="src/PhongMaterial.cpp" />
+		<Unit filename="src/PhongCube.cpp" />
 		<Unit filename="src/Sdl_Manager.cpp" />
 		<Unit filename="src/TestCube.cpp" />
 		<Unit filename="src/TestTriangle.cpp" />
