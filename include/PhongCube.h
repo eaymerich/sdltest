@@ -21,12 +21,14 @@ private:
     static GLint view_matrix_index;
     static GLint projection_matrix_index;
     static GLint normal_matrix_index;
+    static GLint ambient_index;
     static GLint diffuse_index;
     static GLint specular_index;
     static GLint shininess_index;
     static GLint light_src_index;
 
 
+    static GLfloat ambient[];
     static GLfloat diffuse[];
     static GLfloat specular[];
     static GLfloat shininess;

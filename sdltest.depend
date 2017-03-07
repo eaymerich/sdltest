@@ -14,7 +14,7 @@
 	<SDL2/SDL.h>
 	<SDL2/SDL_opengles2.h>
 
-1487779297 source:/home/aymerice/workspace/sdltest/src/Sdl_Manager.cpp
+1488917181 source:/home/aymerice/workspace/sdltest/src/Sdl_Manager.cpp
 	<iostream>
 	"Sdl_Manager.h"
 
@@ -500,10 +500,10 @@
 1487103173 /home/aymerice/workspace/sdltest/include/FlatCube.h
 	<GLES2/gl2.h>
 
-1487710700 /home/aymerice/workspace/sdltest/include/PhongCube.h
+1488918001 /home/aymerice/workspace/sdltest/include/PhongCube.h
 	<GLES2/gl2.h>
 
-1487787134 source:/home/aymerice/workspace/sdltest/src/PhongCube.cpp
+1488918135 source:/home/aymerice/workspace/sdltest/src/PhongCube.cpp
 	"glm/gtc/matrix_transform.hpp"
 	"glm/gtc/type_ptr.hpp"
 	"Camera.h"
