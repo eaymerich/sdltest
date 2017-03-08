@@ -31,11 +31,6 @@ GLint PhongCube::specular_index = 0;
 GLint PhongCube::shininess_index = 0;
 GLint PhongCube::light_src_index = 0;
 
-GLfloat PhongCube::ambient[] = {0.03f, 0.03f, 0.03f};
-GLfloat PhongCube::diffuse[] = {0.7f, 0.7f, 0.7f};
-GLfloat PhongCube::specular[] = {0.3f, 0.3f, 0.3f};
-GLfloat PhongCube::shininess = 100.0f;
-
 /**
  * Flat cube vertices
  */
@@ -132,7 +127,13 @@ GLfloat PhongCube::normals[] = {
     0.0f, -1.0f, 0.0f,
 };
 
-PhongCube::PhongCube() : angle{0.0f} {
+PhongCube::PhongCube() :
+    ambient{0.03f, 0.03f, 0.03f},
+    diffuse{0.7f, 0.7f, 0.7f},
+    specular{0.3f, 0.3f, 0.3f},
+    shininess{100.0f},
+    angle{0.0f}
+{
     if (phongCubeCounter == 0) {
         char vertex_shader[] =
             "#version 100 \n"
@@ -148,6 +149,11 @@ PhongCube::PhongCube() : angle{0.0f} {
             "varying vec3  f_view; "
             "void main(){ "
             "   vec4 cv_pos = view_m * model_m * vec4(v_pos, 1.0); "
+            "   if (light_src.w == 0.0) { "
+            "      f_light = vec3(view_m * light_src); "
+            "   } else { "
+            "      f_light = vec3((view_m * light_src) - cv_pos); "
+            "   } "
             "   f_light = vec3(view_m * light_src); "
             "   f_norm = mat3(view_m) * norm_m * v_norm; "
             "   f_view = vec3(-cv_pos); "
@@ -254,8 +260,10 @@ void PhongCube::draw(){
     glUniform3fv(diffuse_index, 1, diffuse);
     glUniform3fv(specular_index, 1, specular);
     glUniform1f(shininess_index, shininess);
-    //glUniform4f(light_src_index, 1.0f, 1.0f, 1.0f,1.0f);
-    glUniform4f(light_src_index, 0.0f, 0.0f, 1.0f, 0.0f);
+    // Light as point
+    glUniform4f(light_src_index, 0.0f, 3.0f, 3.0f, 1.0f);
+    // Light as direction
+    //glUniform4f(light_src_index, 0.0f, 0.2f, 1.0f, 0.0f);
 
     // Set Vertex Attributes
     glVertexAttribPointer(v_pos_index, 3, GL_FLOAT, GL_FALSE, 0, vertices);

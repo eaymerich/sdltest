@@ -500,10 +500,10 @@
 1487103173 /home/aymerice/workspace/sdltest/include/FlatCube.h
 	<GLES2/gl2.h>
 
-1488918001 /home/aymerice/workspace/sdltest/include/PhongCube.h
+1489005109 /home/aymerice/workspace/sdltest/include/PhongCube.h
 	<GLES2/gl2.h>
 
-1488918135 source:/home/aymerice/workspace/sdltest/src/PhongCube.cpp
+1488990049 source:/home/aymerice/workspace/sdltest/src/PhongCube.cpp
 	"glm/gtc/matrix_transform.hpp"
 	"glm/gtc/type_ptr.hpp"
 	"Camera.h"

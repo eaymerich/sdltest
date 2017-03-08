@@ -27,15 +27,13 @@ private:
     static GLint shininess_index;
     static GLint light_src_index;
 
-
-    static GLfloat ambient[];
-    static GLfloat diffuse[];
-    static GLfloat specular[];
-    static GLfloat shininess;
-
     static GLfloat vertices[];
     static GLfloat normals[];
 
+    GLfloat ambient[3];
+    GLfloat diffuse[3];
+    GLfloat specular[3];
+    GLfloat shininess;
     float angle;
 };
 
