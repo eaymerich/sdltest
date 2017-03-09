@@ -128,6 +128,8 @@ GLfloat PhongCube::normals[] = {
 };
 
 PhongCube::PhongCube() :
+    position{0.5f, 0.0f, 0.0f},
+    scale{0.2f, 1.0f, 1.0f},
     ambient{0.03f, 0.03f, 0.03f},
     diffuse{0.7f, 0.7f, 0.7f},
     specular{0.3f, 0.3f, 0.3f},
@@ -233,14 +235,11 @@ void PhongCube::update(unsigned int timeelapsed){
     angle = PI/4.0f/1000.0f * timeelapsed;
 }
 
-void PhongCube::draw(){
+void PhongCube::draw() const {
     glUseProgram(programObject);
 
     // Get and set transformation matrices
-    glm::mat4 model = glm::rotate(
-        glm::mat4(1.0f),
-        angle,
-        glm::normalize(glm::vec3(0.0f,1.0f,0.0f)));
+    glm::mat4 model = getModelMatrix();
 
     glm::mat4 view = Camera::getCurrentCamera()->viewMatrix();
     glm::mat4 proj = Camera::getCurrentCamera()->projMatrix();
@@ -261,9 +260,9 @@ void PhongCube::draw(){
     glUniform3fv(specular_index, 1, specular);
     glUniform1f(shininess_index, shininess);
     // Light as point
-    glUniform4f(light_src_index, 0.0f, 3.0f, 3.0f, 1.0f);
+    //glUniform4f(light_src_index, 0.0f, 3.0f, 3.0f, 1.0f);
     // Light as direction
-    //glUniform4f(light_src_index, 0.0f, 0.2f, 1.0f, 0.0f);
+    glUniform4f(light_src_index, 0.0f, 0.2f, 1.0f, 0.0f);
 
     // Set Vertex Attributes
     glVertexAttribPointer(v_pos_index, 3, GL_FLOAT, GL_FALSE, 0, vertices);
@@ -273,4 +272,14 @@ void PhongCube::draw(){
 
     // Draw flat cube
     glDrawArrays(GL_TRIANGLES,0,36);
+}
+
+glm::mat4 PhongCube::getModelMatrix() const {
+    glm::mat4 translateM = glm::translate(glm::mat4(1.0f), position);
+    glm::mat4 rotateM = glm::rotate(
+        translateM,
+        angle,
+        glm::normalize(glm::vec3(0.0f,1.0f,0.0f)));
+    glm::mat4 scaleM = glm::scale(rotateM, scale);
+    return scaleM;
 }

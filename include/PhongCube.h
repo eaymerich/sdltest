@@ -2,15 +2,18 @@
 #define __PHONGCUBE_H__
 
 #include <GLES2/gl2.h>
+#include "glm/fwd.hpp"
+#include "glm/gtc/type_precision.hpp"
 
 class PhongCube {
 public:
     PhongCube();
     virtual ~PhongCube();
     virtual void update(unsigned int timeelapsed);
-    virtual void draw();
+    virtual void draw() const;
 
 private:
+    virtual glm::mat4 getModelMatrix() const;
     static unsigned int phongCubeCounter;
     static GLuint vertexShaderId;
     static GLuint fragmentShaderId;
@@ -30,6 +33,8 @@ private:
     static GLfloat vertices[];
     static GLfloat normals[];
 
+    glm::vec3 position;
+    glm::vec3 scale;
     GLfloat ambient[3];
     GLfloat diffuse[3];
     GLfloat specular[3];

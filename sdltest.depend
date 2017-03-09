@@ -500,13 +500,123 @@
 1487103173 /home/aymerice/workspace/sdltest/include/FlatCube.h
 	<GLES2/gl2.h>
 
-1489005109 /home/aymerice/workspace/sdltest/include/PhongCube.h
+1489070788 /home/aymerice/workspace/sdltest/include/PhongCube.h
 	<GLES2/gl2.h>
+	"glm/fwd.hpp"
+	"glm/gtc/type_precision.hpp"
 
-1488990049 source:/home/aymerice/workspace/sdltest/src/PhongCube.cpp
+1489096700 source:/home/aymerice/workspace/sdltest/src/PhongCube.cpp
 	"glm/gtc/matrix_transform.hpp"
 	"glm/gtc/type_ptr.hpp"
 	"Camera.h"
 	"util.h"
 	"PhongCube.h"
+
+1473885901 /home/aymerice/workspace/sdltest/include/glm/gtc/type_precision.hpp
+	"../gtc/quaternion.hpp"
+	"../gtc/vec1.hpp"
+	"../vec2.hpp"
+	"../vec3.hpp"
+	"../vec4.hpp"
+	"../mat2x2.hpp"
+	"../mat2x3.hpp"
+	"../mat2x4.hpp"
+	"../mat3x2.hpp"
+	"../mat3x3.hpp"
+	"../mat3x4.hpp"
+	"../mat4x2.hpp"
+	"../mat4x3.hpp"
+	"../mat4x4.hpp"
+	"type_precision.inl"
+
+1473885901 /home/aymerice/workspace/sdltest/include/glm/gtc/vec1.hpp
+	"../glm.hpp"
+	"../detail/type_vec1.hpp"
+	"vec1.inl"
+
+1473885901 /home/aymerice/workspace/sdltest/include/glm/glm.hpp
+	"detail/_fixes.hpp"
+	<cmath>
+	<climits>
+	<cfloat>
+	<limits>
+	<cassert>
+	"fwd.hpp"
+	"vec2.hpp"
+	"vec3.hpp"
+	"vec4.hpp"
+	"mat2x2.hpp"
+	"mat2x3.hpp"
+	"mat2x4.hpp"
+	"mat3x2.hpp"
+	"mat3x3.hpp"
+	"mat3x4.hpp"
+	"mat4x2.hpp"
+	"mat4x3.hpp"
+	"mat4x4.hpp"
+	"trigonometric.hpp"
+	"exponential.hpp"
+	"common.hpp"
+	"packing.hpp"
+	"geometric.hpp"
+	"matrix.hpp"
+	"vector_relational.hpp"
+	"integer.hpp"
+
+1473885901 /home/aymerice/workspace/sdltest/include/glm/common.hpp
+	"detail/func_common.hpp"
+
+1473885902 /home/aymerice/workspace/sdltest/include/glm/packing.hpp
+	"detail/func_packing.hpp"
+
+1473885901 /home/aymerice/workspace/sdltest/include/glm/detail/func_packing.hpp
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	"func_packing.inl"
+
+1473885901 /home/aymerice/workspace/sdltest/include/glm/detail/func_packing.inl
+	"func_common.hpp"
+	"type_half.hpp"
+	"../fwd.hpp"
+	"func_packing_simd.inl"
+
+1473885901 /home/aymerice/workspace/sdltest/include/glm/detail/type_half.hpp
+	"setup.hpp"
+	"type_half.inl"
+
+1473885901 /home/aymerice/workspace/sdltest/include/glm/detail/type_half.inl
+
+1473885901 /home/aymerice/workspace/sdltest/include/glm/detail/func_packing_simd.inl
+
+1473885902 /home/aymerice/workspace/sdltest/include/glm/vector_relational.hpp
+	"detail/func_vector_relational.hpp"
+
+1473885902 /home/aymerice/workspace/sdltest/include/glm/integer.hpp
+	"detail/func_integer.hpp"
+
+1473885901 /home/aymerice/workspace/sdltest/include/glm/detail/func_integer.hpp
+	"setup.hpp"
+	"precision.hpp"
+	"func_common.hpp"
+	"func_vector_relational.hpp"
+	"func_integer.inl"
+
+1474792689 /home/aymerice/workspace/sdltest/include/glm/detail/func_integer.inl
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"type_int.hpp"
+	"_vectorize.hpp"
+	<intrin.h>
+	<limits>
+	"func_integer_simd.inl"
+
+1473885901 /home/aymerice/workspace/sdltest/include/glm/detail/func_integer_simd.inl
+	"../simd/integer.h"
+
+1473885902 /home/aymerice/workspace/sdltest/include/glm/simd/integer.h
+
+1473885901 /home/aymerice/workspace/sdltest/include/glm/gtc/vec1.inl
+
+1473885901 /home/aymerice/workspace/sdltest/include/glm/gtc/type_precision.inl
 
