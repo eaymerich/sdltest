@@ -2,18 +2,31 @@
 #define __PHONGCUBE_H__
 
 #include <GLES2/gl2.h>
-#include "glm/fwd.hpp"
 #include "glm/gtc/type_precision.hpp"
+#include "glm/fwd.hpp"
 
 class PhongCube {
 public:
     PhongCube();
     virtual ~PhongCube();
     virtual void update(unsigned int timeelapsed);
-    virtual void draw() const;
+    virtual void draw();
+    virtual void draw(const glm::mat4& uber_model);
+    virtual void setPosition(float x, float y, float z);
+    virtual void setPosition(const glm::vec3& aPosition);
+    virtual void setScale(float x, float y, float z);
+    virtual void setScale(const glm::vec3& aScale);
+    virtual void setRotation(float x, float y, float z, float angle);
+    virtual void setRotation(const glm::vec3& aRotationAxis, float angle);
+    virtual void setAmbient(float r, float g, float b);
+    virtual void setAmbient(const glm::vec3& aAmbient);
+    virtual void setDiffuse(float r, float g, float b);
+    virtual void setDiffuse(const glm::vec3& aDiffuse);
+    virtual void setSpecular(float r, float g, float b, float aShininess);
+    virtual void setSpecular(const glm::vec3& aSpecular, float aShininess);
+    virtual glm::mat4 getModelMatrix() const;
 
 private:
-    virtual glm::mat4 getModelMatrix() const;
     static unsigned int phongCubeCounter;
     static GLuint vertexShaderId;
     static GLuint fragmentShaderId;
@@ -35,11 +48,12 @@ private:
 
     glm::vec3 position;
     glm::vec3 scale;
+    glm::vec3 rotationAxis;
+    float rotationAngle;
     GLfloat ambient[3];
     GLfloat diffuse[3];
     GLfloat specular[3];
     GLfloat shininess;
-    float angle;
 };
 
 #endif // __PHONGCUBE_H__

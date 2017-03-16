@@ -7,6 +7,7 @@
 #include "TestCube.h"
 #include "FlatCube.h"
 #include "PhongCube.h"
+#include "PhongShip.h"
 #include "Camera.h"
 
 int main() {
@@ -24,9 +25,11 @@ int main() {
     Camera cameraTop{glm::vec3{0.0f, 2.0f, 0.0f},
                      glm::vec3{0.0f, 0.0f, 0.0f},
                      glm::vec3{0.0f, 0.0f, -1.0f}}; // Camera from Y (top)
-    TestTriangle triangle;
+    //TestTriangle triangle;
     //TestCube cube;
-    PhongCube fcube;
+    //PhongCube fcube;
+
+    PhongShip ship;
 
     // Game Cycle
     while (goon()) {
@@ -36,26 +39,27 @@ int main() {
         // Logic
         uint32_t count = SDL_GetTicks();
         //camera.update();
-        fcube.update(count);
+        //fcube.update(count);
+        ship.update(count);
 
         // Render
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         sdl.setViewPort(TOP_LEFT);
         Camera::setCurrentCamera(cameraFront);
-        fcube.draw();
+        ship.draw();
 
         sdl.setViewPort(TOP_RIGHT);
         Camera::setCurrentCamera(cameraSide);
-        fcube.draw();
+        ship.draw();
 
         sdl.setViewPort(BOTTOM_LEFT);
         Camera::setCurrentCamera(cameraTop);
-        fcube.draw();
+        ship.draw();
 
         sdl.setViewPort(BOTTOM_RIGHT);
         Camera::setCurrentCamera(camera);
-        fcube.draw();
+        ship.draw();
 
 
         sdl.swap();

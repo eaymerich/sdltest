@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1487780477 source:/home/aymerice/workspace/sdltest/main.cpp
+1489176631 source:/home/aymerice/workspace/sdltest/main.cpp
 	<iostream>
 	"Sdl_Manager.h"
 	"Input_Manager.h"
@@ -8,6 +8,7 @@
 	"TestCube.h"
 	"FlatCube.h"
 	"PhongCube.h"
+	"PhongShip.h"
 	"Camera.h"
 
 1487779237 /home/aymerice/workspace/sdltest/include/Sdl_Manager.h
@@ -500,12 +501,12 @@
 1487103173 /home/aymerice/workspace/sdltest/include/FlatCube.h
 	<GLES2/gl2.h>
 
-1489070788 /home/aymerice/workspace/sdltest/include/PhongCube.h
+1489687369 /home/aymerice/workspace/sdltest/include/PhongCube.h
 	<GLES2/gl2.h>
-	"glm/fwd.hpp"
 	"glm/gtc/type_precision.hpp"
+	"glm/fwd.hpp"
 
-1489096700 source:/home/aymerice/workspace/sdltest/src/PhongCube.cpp
+1489687403 source:/home/aymerice/workspace/sdltest/src/PhongCube.cpp
 	"glm/gtc/matrix_transform.hpp"
 	"glm/gtc/type_ptr.hpp"
 	"Camera.h"
@@ -619,4 +620,10 @@
 1473885901 /home/aymerice/workspace/sdltest/include/glm/gtc/vec1.inl
 
 1473885901 /home/aymerice/workspace/sdltest/include/glm/gtc/type_precision.inl
+
+1489696727 source:/home/aymerice/workspace/sdltest/src/PhongShip.cpp
+	"PhongShip.h"
+
+1489687500 /home/aymerice/workspace/sdltest/include/PhongShip.h
+	"PhongCube.h"
 
