@@ -501,7 +501,7 @@
 1487103173 /home/aymerice/workspace/sdltest/include/FlatCube.h
 	<GLES2/gl2.h>
 
-1489687369 /home/aymerice/workspace/sdltest/include/PhongCube.h
+1489782895 /home/aymerice/workspace/sdltest/include/PhongCube.h
 	<GLES2/gl2.h>
 	"glm/gtc/type_precision.hpp"
 	"glm/fwd.hpp"
@@ -621,9 +621,16 @@
 
 1473885901 /home/aymerice/workspace/sdltest/include/glm/gtc/type_precision.inl
 
-1489696727 source:/home/aymerice/workspace/sdltest/src/PhongShip.cpp
+1489777054 source:/home/aymerice/workspace/sdltest/src/PhongShip.cpp
 	"PhongShip.h"
 
-1489687500 /home/aymerice/workspace/sdltest/include/PhongShip.h
+1489782882 /home/aymerice/workspace/sdltest/include/PhongShip.h
 	"PhongCube.h"
+	"PhongStaticCube.h"
+
+1489782867 /home/aymerice/workspace/sdltest/include/PhongStaticCube.h
+	"PhongCube.h"
+
+1489776913 source:/home/aymerice/workspace/sdltest/src/PhongStaticCube.cpp
+	"PhongStaticCube.h"
 

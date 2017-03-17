@@ -1,5 +1,5 @@
-#ifndef __PHONGCUBE_H__
-#define __PHONGCUBE_H__
+#ifndef __PHONG_CUBE_H__
+#define __PHONG_CUBE_H__
 
 #include <GLES2/gl2.h>
 #include "glm/gtc/type_precision.hpp"
@@ -56,4 +56,4 @@ private:
     GLfloat shininess;
 };
 
-#endif // __PHONGCUBE_H__
+#endif // __PHONG_CUBE_H__

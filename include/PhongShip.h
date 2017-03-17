@@ -1,8 +1,8 @@
-#ifndef PHONGSHIP_H
-#define PHONGSHIP_H
+#ifndef PHONG_SHIP_H
+#define PHONG_SHIP_H
 
 #include "PhongCube.h"
-
+#include "PhongStaticCube.h"
 
 class PhongShip : public PhongCube {
 public:
@@ -11,12 +11,12 @@ public:
     virtual void draw() override;
 
 protected:
-    PhongCube body;
-    PhongCube cabin;
-    PhongCube leftWing;
-    PhongCube rightWing;
-    PhongCube leftAileron;
-    PhongCube rightAileron;
+    PhongStaticCube body;
+    PhongStaticCube cabin;
+    PhongStaticCube leftWing;
+    PhongStaticCube rightWing;
+    PhongStaticCube leftAileron;
+    PhongStaticCube rightAileron;
 };
 
-#endif // PHONGSHIP_H
+#endif // PHONG_SHIP_H
