@@ -46,22 +46,28 @@
 		<Unit filename="include/FlatCube.h" />
 		<Unit filename="include/Goon.h" />
 		<Unit filename="include/Input_Manager.h" />
+		<Unit filename="include/PhongCheckersFloor.h" />
 		<Unit filename="include/PhongCube.h" />
 		<Unit filename="include/PhongShip.h" />
+		<Unit filename="include/PhongStaticCube.h" />
 		<Unit filename="include/Sdl_Manager.h" />
 		<Unit filename="include/TestCube.h" />
 		<Unit filename="include/TestTriangle.h" />
+		<Unit filename="include/Time.h" />
 		<Unit filename="include/util.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Camera.cpp" />
 		<Unit filename="src/FlatCube.cpp" />
 		<Unit filename="src/Goon.cpp" />
 		<Unit filename="src/Input_Manager.cpp" />
+		<Unit filename="src/PhongCheckersFloor.cpp" />
 		<Unit filename="src/PhongCube.cpp" />
 		<Unit filename="src/PhongShip.cpp" />
+		<Unit filename="src/PhongStaticCube.cpp" />
 		<Unit filename="src/Sdl_Manager.cpp" />
 		<Unit filename="src/TestCube.cpp" />
 		<Unit filename="src/TestTriangle.cpp" />
+		<Unit filename="src/Time.cpp" />
 		<Unit filename="src/util.cpp" />
 		<Extensions>
 			<code_completion />

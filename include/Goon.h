@@ -7,10 +7,6 @@ public:
     Goon() = default;
     virtual ~Goon() = default;
 
-    bool operator()() {
-        return mGoon;
-    }
-
     Goon& operator=(const bool& other) {
         mGoon = other;
         return *this;
@@ -18,6 +14,14 @@ public:
 
     static void stop() {
         mGoon = false;
+    }
+
+    explicit operator bool() const {
+        return mGoon;
+    }
+
+    bool operator!() const {
+        return !mGoon;
     }
 
 private:

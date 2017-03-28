@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1489176631 source:/home/aymerice/workspace/sdltest/main.cpp
+1490648235 source:/home/aymerice/workspace/sdltest/main.cpp
 	<iostream>
 	"Sdl_Manager.h"
 	"Input_Manager.h"
@@ -7,9 +7,11 @@
 	"TestTriangle.h"
 	"TestCube.h"
 	"FlatCube.h"
+	"PhongCheckersFloor.h"
 	"PhongCube.h"
 	"PhongShip.h"
 	"Camera.h"
+	"Time.h"
 
 1487779237 /home/aymerice/workspace/sdltest/include/Sdl_Manager.h
 	<SDL2/SDL.h>
@@ -29,7 +31,7 @@
 1477595109 source:/home/aymerice/workspace/sdltest/src/Goon.cpp
 	"Goon.h"
 
-1480604914 /home/aymerice/workspace/sdltest/include/Goon.h
+1490648280 /home/aymerice/workspace/sdltest/include/Goon.h
 
 1487014128 source:/home/aymerice/workspace/sdltest/src/util.cpp
 	<iostream>
@@ -483,9 +485,11 @@
 
 1486491756 /home/aymerice/workspace/sdltest/include/PhongMaterial.h
 
-1487780367 source:/home/aymerice/workspace/sdltest/src/Camera.cpp
+1490647116 source:/home/aymerice/workspace/sdltest/src/Camera.cpp
+	<iostream>
 	"glm/gtc/matrix_transform.hpp"
 	"Camera.h"
+	"Time.h"
 
 1487779949 /home/aymerice/workspace/sdltest/include/Camera.h
 	"glm/vec3.hpp"
@@ -633,4 +637,22 @@
 
 1489776913 source:/home/aymerice/workspace/sdltest/src/PhongStaticCube.cpp
 	"PhongStaticCube.h"
+
+1490640449 /home/aymerice/workspace/sdltest/include/PhongCheckersFloor.h
+	<GLES2/gl2.h>
+	"glm/gtc/type_precision.hpp"
+	"glm/fwd.hpp"
+
+1490641420 source:/home/aymerice/workspace/sdltest/src/PhongCheckersFloor.cpp
+	"glm/gtc/matrix_transform.hpp"
+	"glm/gtc/type_ptr.hpp"
+	"Camera.h"
+	"PhongCheckersFloor.h"
+	"util.h"
+
+1490646334 /home/aymerice/workspace/sdltest/include/Time.h
+
+1490646362 source:/home/aymerice/workspace/sdltest/src/Time.cpp
+	<SDL2/SDL.h>
+	"Time.h"
 

@@ -1,6 +1,8 @@
+#include <iostream>
 #include "glm/gtc/matrix_transform.hpp"
 
 #include "Camera.h"
+#include "Time.h"
 
 using namespace glm;
 
