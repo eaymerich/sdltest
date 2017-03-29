@@ -24,6 +24,9 @@ public:
     virtual void setDiffuse(const glm::vec3& aDiffuse);
     virtual void setSpecular(float r, float g, float b, float aShininess);
     virtual void setSpecular(const glm::vec3& aSpecular, float aShininess);
+    virtual glm::vec3 getPosition() const {
+        return position;
+    }
     virtual glm::mat4 getModelMatrix() const;
 
 private:

@@ -1,17 +1,7 @@
 # depslib dependency file v1.0
-1490648235 source:/home/aymerice/workspace/sdltest/main.cpp
+1490817569 source:/home/aymerice/workspace/sdltest/main.cpp
 	<iostream>
-	"Sdl_Manager.h"
-	"Input_Manager.h"
-	"Goon.h"
-	"TestTriangle.h"
-	"TestCube.h"
-	"FlatCube.h"
-	"PhongCheckersFloor.h"
-	"PhongCube.h"
-	"PhongShip.h"
-	"Camera.h"
-	"Time.h"
+	"Game.h"
 
 1487779237 /home/aymerice/workspace/sdltest/include/Sdl_Manager.h
 	<SDL2/SDL.h>
@@ -21,9 +11,10 @@
 	<iostream>
 	"Sdl_Manager.h"
 
-1477595220 /home/aymerice/workspace/sdltest/include/Input_Manager.h
+1490815259 /home/aymerice/workspace/sdltest/include/Input_Manager.h
+	"EventHandler.h"
 
-1480604960 source:/home/aymerice/workspace/sdltest/src/Input_Manager.cpp
+1490817430 source:/home/aymerice/workspace/sdltest/src/Input_Manager.cpp
 	<SDL2/SDL.h>
 	"Goon.h"
 	"Input_Manager.h"
@@ -505,12 +496,12 @@
 1487103173 /home/aymerice/workspace/sdltest/include/FlatCube.h
 	<GLES2/gl2.h>
 
-1489782895 /home/aymerice/workspace/sdltest/include/PhongCube.h
+1490819135 /home/aymerice/workspace/sdltest/include/PhongCube.h
 	<GLES2/gl2.h>
 	"glm/gtc/type_precision.hpp"
 	"glm/fwd.hpp"
 
-1489687403 source:/home/aymerice/workspace/sdltest/src/PhongCube.cpp
+1490733443 source:/home/aymerice/workspace/sdltest/src/PhongCube.cpp
 	"glm/gtc/matrix_transform.hpp"
 	"glm/gtc/type_ptr.hpp"
 	"Camera.h"
@@ -643,16 +634,46 @@
 	"glm/gtc/type_precision.hpp"
 	"glm/fwd.hpp"
 
-1490641420 source:/home/aymerice/workspace/sdltest/src/PhongCheckersFloor.cpp
+1490808465 source:/home/aymerice/workspace/sdltest/src/PhongCheckersFloor.cpp
 	"glm/gtc/matrix_transform.hpp"
 	"glm/gtc/type_ptr.hpp"
 	"Camera.h"
 	"PhongCheckersFloor.h"
 	"util.h"
 
-1490646334 /home/aymerice/workspace/sdltest/include/Time.h
+1490819647 /home/aymerice/workspace/sdltest/include/Time.h
+	<stdint.h>
 
 1490646362 source:/home/aymerice/workspace/sdltest/src/Time.cpp
 	<SDL2/SDL.h>
 	"Time.h"
+
+1490816533 /home/aymerice/workspace/sdltest/include/EventHandler.h
+	<SDL2/SDL.h>
+
+1490815934 source:/home/aymerice/workspace/sdltest/src/EventHandler.cpp
+	"EventHandler.h"
+
+1490817342 /home/aymerice/workspace/sdltest/include/Game.h
+	"EventHandler.h"
+	"Goon.h"
+	"Input_Manager.h"
+	"Sdl_Manager.h"
+	"Time.h"
+
+1490819452 source:/home/aymerice/workspace/sdltest/src/Game.cpp
+	"Camera.h"
+	"PhongShip.h"
+	"PhongCheckersFloor.h"
+	"ShipController.h"
+	"Game.h"
+
+1490820309 /home/aymerice/workspace/sdltest/include/ShipController.h
+	"EventHandler.h"
+	"PhongShip.h"
+
+1490819683 source:/home/aymerice/workspace/sdltest/src/ShipController.cpp
+	"Goon.h"
+	"Time.h"
+	"ShipController.h"
 

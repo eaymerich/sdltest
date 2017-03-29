@@ -3,20 +3,19 @@
 #include "Goon.h"
 #include "Input_Manager.h"
 
-void Input_Manager::readInput()
-{
+Input_Manager::Input_Manager() :
+    eventHandler{nullptr}
+{}
+
+void Input_Manager::setEventHandler(EventHandler* handler) {
+    eventHandler = handler;
+}
+
+void Input_Manager::readInput() {
     SDL_Event event;
-    while (SDL_PollEvent(&event)) {
-        switch (event.type) {
-        case SDL_QUIT:
-            Goon::stop();
-            break;
-        case SDL_KEYDOWN:
-            switch (event.key.keysym.sym) {
-            case SDLK_ESCAPE:
-                Goon::stop();
-                break;
-            }
+    if (eventHandler) {
+        while (SDL_PollEvent(&event)) {
+            eventHandler->handleEvent(&event);
         }
     }
 }

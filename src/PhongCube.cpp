@@ -182,6 +182,7 @@ PhongCube::PhongCube() :
             ""
             "   vec3 view = normalize(f_view); "
             "   vec3 refl = (2.0 * doti * normal) - light; "
+            //"   vec3 refl = reflect(-light, normal); "
             "   float cos_alpha = max(dot(refl, view), 0.0); "
             "   vec3 i_spec = pow(cos_alpha, f_shininess) * f_specular; "
             ""
